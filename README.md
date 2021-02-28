@@ -1,5 +1,5 @@
 # SMT1-iOS-to-GBA
-*Port of the officially localized SMT1 script for the GBA version*
+*Port of the officially localized SMT1 script from iOS to GBA*
 
 ### What you need:
 1. A GBA rom of Shin Megami Tensei 1 (Japanese version), e.g., "Shin Megami Tensei (Japan).gba" (CRC32: B857C3C5)
