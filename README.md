@@ -17,11 +17,19 @@
 6. The next step is to concatenate the two *.gba* ROMs. Place your patched GBA files in the same folder as the "SMT1_create.bat" batch script, then run the batch script
 7. When it's done it will create the "SMT1_new.gba" ROM, which is now ready for playing
 
-* For Unix/MacOS users:
+* For Linux users:
 4. Open the terminal and locate the above folder, then run the script "SMT1_create.sh" (credit to [Ds886](https://github.com/Ds886)) as:
 
    `SMT1_create.sh [GBA ROM filename] [iOS ROM filename]`
   
    The script calls the flips executable (by [Alcaro](https://github.com/Alcaro)) and directly generates the "SMT1_new.gba" ROM.
+  
+* For MacOS users:
+4. Open terminal, make sure the `SMT1_1_gba.bps`, `SMT1_2_ios.bps`, `SMT1_macos_script.sh`, megaten1 file from the iOS iPA, and the SMT1 GBA JP ROM are all in the same folder.
+5. Type `cd ` (but do not hit enter) then drag and drop the folder with all the related files and hit enter.
+6. Type `sh SMT1_macos_script.sh [Name of GBA ROM] [megaten1 file]`
+7. If all goes correctly, the "SMT1_new.gba" file should be generated and should be around 16mb in size
+
+   Thank you to Sappharad for [MultiPatch](https://github.com/Sappharad/MultiPatch)
 
 Credits for the flips project https://github.com/Alcaro/Flips
