@@ -20,6 +20,6 @@
 
   `SMT1_create.sh [GBA ROM filename] [iOS ROM filename]`
   
-  The script calls the flips executable (by Alcaro) and directly generates the "SMT1_new.gba" ROM.
+  The script calls the flips executable (by [Alcaro](https://github.com/Alcaro)) and directly generates the "SMT1_new.gba" ROM.
 
 Credits for the flips project https://github.com/Alcaro/Flips
