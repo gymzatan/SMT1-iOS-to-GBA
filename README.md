@@ -16,8 +16,10 @@
 6. The next step is to concatenate the two *.gba* roms. Place your patched GBA files in the same folder as the "SMT1_create.bat" batch script, then run the batch script
 7. When it's done it will create the "SMT1_new.gba" ROM, which is now ready for playing
 
-* For Unix/MacOS users, open the terminal and locate the above folder, then run the script "SMT1_create.sh" as:
+* For Unix/MacOS users, open the terminal and locate the above folder, then run the script "SMT1_create.sh" (credit to Dash) as:
 
   `SMT1_create.sh [GBA rom filename] [iOS rom filename]`
   
   The script generates the "SMT1_new.gba" ROM directly.
+
+Credits for the flips project https://github.com/Alcaro/Flips
