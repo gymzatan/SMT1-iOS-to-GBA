@@ -16,6 +16,6 @@
 * For Windows users, place your patched GBA files in the same folder as the "SMT1_create.bat" batch script, then run the batch script
 * For Unix/MacOS users, open the terminal and locate the above folder, then run the following command: 
 
-  `cat SMT1_1.gba SMT1_2.gba > SMT1_new.gba`
+  `cat SMT1_1_gba.gba SMT1_2_ios.gba > SMT1_new.gba`
 
 7. When it's done it will create the "SMT1_new.gba" ROM, which is now ready for playing
