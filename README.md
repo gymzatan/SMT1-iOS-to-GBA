@@ -20,8 +20,8 @@
 * For Unix/MacOS users:
 4. Open the terminal and locate the above folder, then run the script "SMT1_create.sh" (credit to [Ds886](https://github.com/Ds886)) as:
 
-  `SMT1_create.sh [GBA ROM filename] [iOS ROM filename]`
+   `SMT1_create.sh [GBA ROM filename] [iOS ROM filename]`
   
-  The script calls the flips executable (by [Alcaro](https://github.com/Alcaro)) and directly generates the "SMT1_new.gba" ROM.
+   The script calls the flips executable (by [Alcaro](https://github.com/Alcaro)) and directly generates the "SMT1_new.gba" ROM.
 
 Credits for the flips project https://github.com/Alcaro/Flips
