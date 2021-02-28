@@ -1,0 +1,1 @@
+copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba
