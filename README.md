@@ -14,5 +14,8 @@
 5. Patch the "megaten1" file from the IPA with "SMT1_2_ios.bps" using the same BPS patcher, save it as "SMT1_2_ios.gba" (by default it will be saved as SMT1_2_ios.bps; please ensure to rename it correctly)
 6. The next step is to concatenate the two *.gba* roms:
 * For Windows users, place your patched GBA files in the same folder as the "SMT1_create.bat" batch script, then run the batch script
-* For Unix/MacOS users, open the terminal and locate the above folder, then run the following command: `cat SMT1_1.gba SMT1_2.gba > SMT1_new.gba`
+* For Unix/MacOS users, open the terminal and locate the above folder, then run the following command: 
+
+  `cat SMT1_1.gba SMT1_2.gba > SMT1_new.gba`
+
 7. When it's done it will create the "SMT1_new.gba" ROM, which is now ready for playing
