@@ -21,19 +21,29 @@ CALL :printInstruction
 EXIT /B
 )
 
+ECHO Cleaning old builds
+GOTO clean
+
 ECHO Applying patchs
 GOTO :applyroms
+
+
 
 :: Functions
 :printInstruction
 ECHO USAGE: SMT1_create.bat [path to original rom] [path to iOS rom]
 EXIT /B
 
+:clean
+del SMT1_1_gba.gba
+del SMT1_2_ios.gba
+EXIT /B
+
 :applyroms
 ECHO Patching GBA rom
-bin\flips.exe --apply "SMT1_1_gba.bps" %orig% "SMT1_1_gba.gba"
+bin\beat.exe -apply -p "SMT1_1_gba.bps" -o "SMT1_1_gba.gba" %orig%
 ECHO Patching iOS rom
-bin\flips.exe --apply "SMT1_1_ios.bps" %ios% "SMT1_1_ios.gba"
+bin\beat.exe -apply -p "SMT1_2_ios.bps" -o "SMT1_2_ios.gba" %ios%
 GOTO :combineroms
 EXIT /B
 
