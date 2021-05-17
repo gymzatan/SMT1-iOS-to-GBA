@@ -1,43 +1,44 @@
-@echo off
+@ECHO off
 GOTO :MAIN
 
 :: Functions
 :printInstruction
-set a=1
-echo usage: SMT1_create.bat [path to original rom] [path to iOS rom]
-goto :EOF
+ECHO usage: SMT1_create.bat [path to original rom] [path to iOS rom]
+GOTO :EOF
 
 :applyroms
-bin/flips.exe --apply "SMT1_1_gba.bps" %orig% "SMT1_1_gba.gba"
-bin/flips.exe --apply "SMT1_1_ios.bps" %ios% "SMT1_1_ios.gba"
-goto :combineroms
+bin\flips.exe --apply "SMT1_1_gba.bps" %orig% "SMT1_1_gba.gba"
+bin\flips.exe --apply "SMT1_1_ios.bps" %ios% "SMT1_1_ios.gba"
+GOTO :combineroms
 
 :combineroms
 copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba
 
-goto :EOF
+GOTO :EOF
 
 
 
 :MAIN
-set orig=%1
-set ios=%2
+SET orig=%1
+SET ios=%2
+SET a=1
 
-echo %orig%
-echo %ios%
+ECHO %orig%
+ECHO %ios%
 
 
-echo "orig - %orig%; ios = %ios%"
+ECHO "orig - %orig%; ios = %ios%"
 
-if not exist %orig% (
-echo "File not found"
-call :printInstruction
+IF NOT EXIST %orig% (
+ECHO "File not found"
+CALL :printInstruction
+SET a=0
 )
 
-if not exist %ios% (
-echo "File not found"
-call :printInstruction
+IF NOT EXIST %ios% (
+ECHO "File not found"
+CALL :printInstruction
+SET a=0
 )
 
-IF a==1 (goto :applyroms)
-
+IF %a%==1 (GOTO :applyroms)
