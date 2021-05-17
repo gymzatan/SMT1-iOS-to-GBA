@@ -3,50 +3,45 @@ GOTO :MAIN
 
 :: Functions
 :printInstruction
-ECHO "USAGE: SMT1_create.bat [path to original rom] [path to iOS rom]"
-GOTO :exit
+ECHO USAGE: SMT1_create.bat [path to original rom] [path to iOS rom]
 
 :applyroms
-ECHO "Patching GBA rom"
+ECHO Patching GBA rom
 bin\flips.exe --apply "SMT1_1_gba.bps" %orig% "SMT1_1_gba.gba"
-ECHO "Patching iOS rom"
+ECHO Patching iOS rom
 bin\flips.exe --apply "SMT1_1_ios.bps" %ios% "SMT1_1_ios.gba"
 GOTO :combineroms
 
 :combineroms
-ECHO "Combining roms"
+ECHO Combining roms
 copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba
 
-GOTO :exit
 
 
 
 :MAIN
 SET orig=%1
 SET ios=%2
-SET bRun=1
 
-ECHO "Recived values:"
-ECHO "Orginal GBA ROM: %orig%"
-ECHO "Orginal iOS ROM: %ios%"
+ECHO Recived values:
+ECHO Orginal GBA ROM: %orig%
+ECHO Orginal iOS ROM: %ios%
 
 
-ECHO "Testing accessibility to Original file"
+ECHO Testing accessibility to Original file
 IF NOT EXIST %orig% (
-ECHO "File not found"
+ECHO File not found
 CALL :printInstruction
-SET bRun=0
+GOTO:EOF
 )
 
-ECHO "Testing accessibility to iOS file"
+ECHO Testing accessibility to iOS file
 IF NOT EXIST %ios% (
-ECHO "File not found"
+ECHO File not found
 CALL :printInstruction
-SET bRun=0
+GOTO:EOF
 )
 
-ECHO "Applying patchs"
-IF %bRun%==1 (GOTO :applyroms)
+ECHO Applying patchs
+GOTO :applyroms
 
-:exit
-echo "Exiting"
