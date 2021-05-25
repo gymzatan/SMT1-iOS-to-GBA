@@ -53,7 +53,16 @@ then
 	echo ""
 	echo "==================================================================="
 	echo ""
-	echo ""
+	echo "Deleting old patches"
+	if [ -e "SMT1_1_gba.gba" ]
+	then
+		rm "SMT1_1_gba.gba"
+	elif [ -e "SMT1_2_ios.gba" ]
+	then
+		rm "SMT1_2_ios.gba"
+	fi
+
+
 	echo "Patching File"
 	$patcher --apply "SMT1_1_gba.bps" "$1" "SMT1_1_gba.gba"
 	$patcher --apply "SMT1_2_ios.bps" "$2" "SMT1_2_ios.gba"
