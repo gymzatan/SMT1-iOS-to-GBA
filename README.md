@@ -26,6 +26,6 @@
 4. Patch your SMT1 GBA ROM with "SMT1_1_gba.bps" using a BPS patcher, such as Floating IPS, and save it as "SMT1_1_gba.gba"
 5. Patch the "megaten1" file from the IPA with "SMT1_2_ios.bps" using the same BPS patcher, save it as "SMT1_2_ios.gba" (by default it will be saved as SMT1_2_ios.bps; please ensure to rename it correctly)
 6. Combine the patched ROMs by the following command
-   `copy /b SMT1_1_gba.gba SMT1_2_ios.gba SMT1_new.gba`
+   `copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba`
 
 Credits for the flips project https://github.com/Alcaro/Flips
