@@ -13,6 +13,7 @@
 
 * For Windows users:
 4. Open the terminal and locate the above folder, then run the script "SMT1_create.bat" (credit to [Ds886](https://github.com/Ds886)) as:
+
    `SMT1_create.bat [GBA ROM filename] [iOS ROM filename]`
 
 * For Unix/MacOS users:
