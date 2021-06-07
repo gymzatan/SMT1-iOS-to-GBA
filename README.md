@@ -12,7 +12,7 @@
 3. Extract the "megaten1" file (no file extension; CRC32: A3AAC34F) from this folder, place it in the same folder as the gba ROM
 
 * For Windows users:
-4. Locate the above folder, then double-click on the file "SMT1_create.bat" (credit to [Ds886](https://github.com/Ds886)) as:
+4. Open the terminal and locate the above folder, then run the script "SMT1_create.bat" (credit to [Ds886](https://github.com/Ds886)) as:
    `SMT1_create.bat [GBA ROM filename] [iOS ROM filename]`
 
 * For Unix/MacOS users:
