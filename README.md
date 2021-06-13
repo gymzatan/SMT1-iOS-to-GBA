@@ -12,14 +12,14 @@
 3. Extract the "megaten1" file (no file extension; CRC32: A3AAC34F) from this folder, place it in the same folder as the gba ROM
 
 * For Windows users:
-4. Open the terminal and locate the above folder, then run the script "SMT1_create.bat" (credit to [Ds886](https://github.com/Ds886)) as:
+4. Open cmd (Command Prompt) and locate the above folder, then run the script "SMT1_create.bat" (credit to [Ds886](https://github.com/Ds886)) as:
 
-   `SMT1_create.bat [GBA ROM filename] [iOS ROM filename]`
+   `SMT1_create.bat [GBA ROM filename] megaten1`
 
 * For Unix/MacOS users:
 4. Open the terminal and locate the above folder, then run the script "SMT1_create.sh" (credit to [Ds886](https://github.com/Ds886)) as:
 
-   `SMT1_create.sh [GBA ROM filename] [iOS ROM filename]`
+   `SMT1_create.sh [GBA ROM filename] megaten1`
 
    The script calls the flips executable (by [Alcaro](https://github.com/Alcaro)) and directly generates the "SMT1_new.gba" ROM.
 
