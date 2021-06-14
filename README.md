@@ -31,7 +31,7 @@
    
 ### Optional patches
 1. Font hack by FlamePurge:
-   Apply the patch "SMT1_GBA_Font_Hack.bps" inside the folder "Optional Patches" to the English-patched rom (e.g., SMT1_new.gba).
+   Apply the patch "SMT1_GBA_Font_Hack.bps" to the English-patched rom (e.g., SMT1_new.gba).
    This patch alters the following 16x8 (big dialogue font) letters to look more even:
    A B M W X
    a c k t
