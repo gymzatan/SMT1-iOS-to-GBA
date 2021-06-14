@@ -28,5 +28,11 @@
 5. Patch the "megaten1" file from the IPA with "SMT1_2_ios.bps" using the same BPS patcher, save it as "SMT1_2_ios.gba" (by default it will be saved as SMT1_2_ios.bps; please ensure to rename it correctly)
 6. Combine the patched ROMs by the following command
    `copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba`
+   
+* Optional font hack patch by FlamePurge:
+Apply the patch SMT1_GBA_Font_Hack.bps to the English-patched rom (e.g., SMT1_new.gba).
+This patch alters the following 16x8 (big dialogue font) letters to look more even:
+A B M W X
+a c k t
 
 Credits for the flips project https://github.com/Alcaro/Flips
