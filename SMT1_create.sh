@@ -35,7 +35,7 @@ then
 		then
 			echo 'Downloading multiPatch'
 			downloadedZip='./bin/multiPatch.zip'
-			curl 'https://projects.sappharad.com/tools/multiPatch171_cmd.zip' -o $downloadedZip
+			curl 'https://projects.sappharad.com/multipatch/multipatch20_cmd.zip' -o $downloadedZip
 
 			echo "Decompressing multiPatch"
 			unzip   $downloadedZip  -d "bin/"
