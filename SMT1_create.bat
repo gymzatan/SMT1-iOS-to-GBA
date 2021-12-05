@@ -2,9 +2,22 @@
 SET orig=%1
 SET ios=%2
 
+IF NOT DEFINED orig (
+ECHO GBA rom not provide
+CALL :printInstruction
+EXIT /B
+)
+
+IF NOT DEFINED ios (
+ECHO iOS rom not provide
+CALL :printInstruction
+EXIT /B
+)
+
 ECHO Recived values:
 ECHO Orginal GBA ROM: %orig%
 ECHO Orginal iOS ROM: %ios%
+
 
 
 ECHO Testing accessibility to Original file
