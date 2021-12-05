@@ -9,7 +9,7 @@ EXIT /B
 )
 
 IF NOT DEFINED ios (
-ECHO GBA rom not provide
+ECHO iOS rom not provide
 CALL :printInstruction
 EXIT /B
 )
