@@ -1,12 +1,6 @@
 # SMT1-iOS-to-GBA
 *Port of the officially localized SMT1 script from iOS to GBA*
 
-### PCE Content Expansion (English)
-
-[Download the BPS patch](SMT1_PCE_Content_Expansion_EN.bps) and its separate [readme.txt](readme.txt). Installation instructions, the required English base, features and fusion recipes are in that independent readme.
-
-The instructions below create the standard English game from the Japanese GBA and English iOS files.
-
 ### What you need:
 1. A GBA ROM of Shin Megami Tensei 1 (Japanese version), e.g., "Shin Megami Tensei (Japan).gba" (CRC32: B857C3C5)
 2. An iOS ROM of Shin Megami Tensei 1 (English version), e.g., "Shin Megami Tensei (ENG) v1.0.0.ipa"
@@ -41,5 +35,11 @@ The instructions below create the standard English game from the Japanese GBA an
    This patch alters the following 16x8 (big dialogue font) letters to look more even:
    A B M W X
    a c k t
+
+2. PCE Content Expansion by gymzatan:
+   An optional expansion for the completed English GBA port, adding selected PC Engine CD demons, story events, special fusions, A-DDS entries, and in-game cinematics with their background music.
+   [Download the PCE BPS](SMT1_PCE_Content_Expansion_EN.bps) and its separate [readme.txt](readme.txt) for installation, content details and fusion recipes. Apply the BPS to the unmodified English ROM generated above (16 MiB; CRC32 **F74DB49F**). The result is 32 MiB with CRC32 **6C1D620D**. If also using the optional font adjustment, apply the PCE BPS first, then the font IPS.
+
+The [latest release](https://github.com/gymzatan/SMT1-iOS-to-GBA/releases/latest) provides the two core translation BPS files, both optional patches, and the separate PCE readme as individual downloads.
 
 Credits for the flips project https://github.com/Alcaro/Flips
