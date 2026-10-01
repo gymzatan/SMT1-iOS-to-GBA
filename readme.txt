@@ -108,8 +108,12 @@ gymzatan: iOS-to-GBA English script port and PCE Content Expansion.
 Ds886: the translation repository's creation scripts.
 Alcaro: Floating IPS / Flips.
 
-The separate optional font hack in the repository is by FlamePurge. It is
-for the standard 16 MiB English game and is not required by this release.
+The separate optional font hack is by FlamePurge. Apply
+SMT1_GBA_Font_Hack.ips to either the standard English game or the completed
+PCE expansion. The same ordinary IPS has no input checksum check and keeps
+the ROM size unchanged. When using both additions, apply the PCE BPS first,
+then the font IPS. The PCE expansion with this font has CRC32 3B46F420.
+The font adjustment is optional.
 
 This release distributes only a modification patch and documentation.
 No game ROM, iOS application, save file or emulator is included.
