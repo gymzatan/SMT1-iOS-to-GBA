@@ -33,8 +33,8 @@ INSTALLATION
 
 Expected output:
 Size:   33,554,432 bytes (32 MiB)
-CRC32:  6C1D620D
-SHA256: 04a29da14b7c8be8b575c5513d325f56a7b2a428335d362ac2905e3f65b43c43
+CRC32:  3D144D36
+SHA256: 4da54744890393994fad5f9cc8424681217a3001f9606eaa9b6344dcae68cc2b
 
 If the patcher reports an input mismatch, check the base ROM. Do not force
 the patch onto a different revision or an already modified ROM.
@@ -112,7 +112,7 @@ The separate optional font hack is by FlamePurge. Apply
 SMT1_GBA_Font_Hack.ips to either the standard English game or the completed
 PCE expansion. The same ordinary IPS has no input checksum check and keeps
 the ROM size unchanged. When using both additions, apply the PCE BPS first,
-then the font IPS. The PCE expansion with this font has CRC32 3B46F420.
+then the font IPS. The PCE expansion with this font has CRC32 6A4FDB1B.
 The font adjustment is optional.
 
 This release distributes only a modification patch and documentation.
