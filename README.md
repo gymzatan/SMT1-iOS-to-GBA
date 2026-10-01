@@ -3,11 +3,7 @@
 
 ### PCE Content Expansion (English)
 
-[Download the BPS patch](https://github.com/gymzatan/SMT1-iOS-to-GBA/releases/download/pce-content-expansion/SMT1_PCE_Content_Expansion_EN.bps) and [readme.txt](https://github.com/gymzatan/SMT1-iOS-to-GBA/releases/download/pce-content-expansion/readme.txt) separately.
-
-This GBA modification adds the PCE demons and Pascal event forms, their story events and special fusions, complete A-DDS entries, and five in-game cinematics with their PCE background music. The Sugamo ritual uses the native three-demon selection and fusion animation. It also restores selected terminal, transport and Tokyo Destiny Land visuals. Events use the existing locations; no new dungeon maps are added.
-
-Apply `SMT1_PCE_Content_Expansion_EN.bps` to the unmodified **English v1.3b** ROM from [this translation](https://www.romhacking.net/translations/6129/), before any optional font hack or other modification. Required input: **16,777,216 bytes**, CRC32 **F74DB49F**, SHA256 `38f1d1ed5c070b6345f6b9e645d98ce6711fa36e6129836ab57c35a71a6d169f`. Output: **33,554,432 bytes**, CRC32 **6C1D620D**. Installation, feature details and special-fusion recipes are in the package's `readme.txt`.
+[Download the BPS patch](SMT1_PCE_Content_Expansion_EN.bps) and its separate [readme.txt](readme.txt). Installation instructions, the required English base, features and fusion recipes are in that independent readme.
 
 The instructions below create the standard English game from the Japanese GBA and English iOS files.
 
