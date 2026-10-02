@@ -33,8 +33,8 @@ INSTALLATION
 
 Expected output:
 Size:   33,554,432 bytes (32 MiB)
-CRC32:  3D144D36
-SHA256: 4da54744890393994fad5f9cc8424681217a3001f9606eaa9b6344dcae68cc2b
+CRC32:  9218C4D1
+SHA256: 1ca0c0b747e31685c9002d5756c7cc8ba53999cc21dbfa892df86e3eead771bc
 
 If the patcher reports an input mismatch, check the base ROM. Do not force
 the patch onto a different revision or an already modified ROM.
@@ -56,11 +56,16 @@ ADDED CONTENT
 * The Sugamo Prison three-demon ritual, using the native material-selection
   sequence and fusion animation.
 * Five PCE in-game cinematics: Gotou's appearance, Tokyo's destruction,
-  Thor, the Great Flood, and the Messiah statue/Law Hero scene. They are
+  the Chaos Hero's transformation, the Great Flood, and the Messiah
+  statue/Law Hero scene. They are
   adapted to the GBA screen and include the corresponding PCE background
   music. Normal game display and music resume after each scene.
 * PCE terminal presentation, water-transport ripples, and the Demon Duck
   and Zombie Mouse portraits at Tokyo Destiny Land.
+
+The Chaos Hero's transformation plays after his native demon fusion,
+before his declaration of newfound power. Thor uses his original event
+and battle sequence without this movie.
 
 Events are integrated into the existing game locations. This modification
 does not add new dungeon maps. PCE title, opening and staff-roll sequences
@@ -112,7 +117,7 @@ The separate optional font hack is by FlamePurge. Apply
 SMT1_GBA_Font_Hack.ips to either the standard English game or the completed
 PCE expansion. The same ordinary IPS has no input checksum check and keeps
 the ROM size unchanged. When using both additions, apply the PCE BPS first,
-then the font IPS. The PCE expansion with this font has CRC32 6A4FDB1B.
+then the font IPS. The PCE expansion with this font has CRC32 C54352FC.
 The font adjustment is optional.
 
 This release distributes only a modification patch and documentation.
