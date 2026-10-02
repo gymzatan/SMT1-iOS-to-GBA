@@ -33,8 +33,8 @@ INSTALLATION
 
 Expected output:
 Size:   33,554,432 bytes (32 MiB)
-CRC32:  9218C4D1
-SHA256: 1ca0c0b747e31685c9002d5756c7cc8ba53999cc21dbfa892df86e3eead771bc
+CRC32:  301EAAD9
+SHA256: ac7577de47dd84a63a5ad81ebd93fa970f8374a8dd1fe3297949819419d003d6
 
 If the patcher reports an input mismatch, check the base ROM. Do not force
 the patch onto a different revision or an already modified ROM.
@@ -67,6 +67,12 @@ The Chaos Hero's transformation plays after his native demon fusion,
 before his declaration of newfound power. Thor uses his original event
 and battle sequence without this movie.
 
+Gotou's introduction plays on the first meeting only. Tokyo's destruction
+plays before the first waking conversation with En no Ozuno, without
+replaying during later visits or tasks. The Great Flood plays once from
+either native trigger, including when returning before using water
+transport. The Messiah statue scene uses the native first-inspection flag.
+
 Events are integrated into the existing game locations. This modification
 does not add new dungeon maps. PCE title, opening and staff-roll sequences
 are outside its scope.
@@ -90,7 +96,11 @@ from the hero-level check is preserved.
 At the Tokyo Destiny Land reunion, a previously fused Pascal returns as
 LV55 Cerberus; an unfused Pascal can join in the LV65 beast form. The
 event's recognition, Golden Apple, acceptance and party-space conditions
-still apply. A full COMP can prevent an actual ally from joining; the
+still apply. The Golden Apple is checked, not consumed. Declining or a
+full COMP preserves the waiting state for a later return, without repeating
+the recovery dialogue. Owning the exact late form completes the reunion
+without adding a duplicate; earlier Cerberus forms can coexist with it.
+A full COMP can prevent an actual ally from joining; the
 unfused dog following the hero is handled separately as a fusion material.
 
 SAVES AND TESTING
@@ -105,6 +115,10 @@ The implementation has been checked in mGBA, including native fusion and
 event completion, later movement and revisits, saving and reloading,
 party names, A-DDS, and cinematic display/audio restoration. Applying this
 BPS to the required base reproduces the delivered ROM byte for byte.
+The additional condition checks cover 25 Pascal cases and 18 cinematic
+cases per language through real event entrances, including consecutive
+returns without resetting story flags. They do not constitute a complete
+playthrough of every route.
 
 CREDITS
 -------
@@ -117,7 +131,7 @@ The separate optional font hack is by FlamePurge. Apply
 SMT1_GBA_Font_Hack.ips to either the standard English game or the completed
 PCE expansion. The same ordinary IPS has no input checksum check and keeps
 the ROM size unchanged. When using both additions, apply the PCE BPS first,
-then the font IPS. The PCE expansion with this font has CRC32 C54352FC.
+then the font IPS. The PCE expansion with this font has CRC32 67453CF4.
 The font adjustment is optional.
 
 This release distributes only a modification patch and documentation.
