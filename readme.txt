@@ -33,8 +33,8 @@ INSTALLATION
 
 Expected output:
 Size:   33,554,432 bytes (32 MiB)
-CRC32:  0A3D9D2B
-SHA256: 47f1dc7f38a7768a28aaa62b3769554b7d490978a1a1df0753c5237cd96a82df
+CRC32:  9C325EFC
+SHA256: 43680ecf6a96127640e750b2b2a0eefaac96e05cb4157a74160f7877755f6445
 
 If the patcher reports an input mismatch, check the base ROM. Do not force
 the patch onto a different revision or an already modified ROM.
@@ -47,6 +47,8 @@ ADDED CONTENT
   remains available.
 * Native battle abilities, skills, fusion, summoning, party status and game
   saving for the added allies. English party-name graphics are included.
+  Added demon portraits align with the original GBA sprite baseline in
+  fusion previews and status screens.
 * A-DDS entries with race/name, place of origin and a short summary on the
   first page, followed by paginated background descriptions.
 * Pascal's Ichigaya rescue, initial fusion, terminal and Tokyo Destiny Land
