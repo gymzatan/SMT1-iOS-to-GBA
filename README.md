@@ -30,16 +30,24 @@
    `copy /b SMT1_1_gba.gba+SMT1_2_ios.gba SMT1_new.gba`
    
 ### Optional patches
+
+The core project is the English iOS-to-GBA script port. The following additions are optional.
+
 1. Font hack by FlamePurge:
-   Apply `SMT1_GBA_Font_Hack.ips` to the standard English GBA ROM or the completed PCE Content Expansion ROM. The same ordinary IPS works on both and does not validate the input checksum or resize the ROM. If using the expansion, apply its BPS first, then the optional font IPS. The standard English font-patched result has CRC32 **2050B471**; the PCE expansion with the optional font has CRC32 **CB69C8D1**.
-   This patch alters the following 16x8 (big dialogue font) letters to look more even:
-   A B M W X
-   a c k t
+   Apply `SMT1_GBA_Font_Hack.ips` to the standard English ROM or either completed PCE edition. This ordinary IPS has no input checksum check and preserves ROM size. Apply a chosen PCE BPS first, then the font IPS. It adjusts these 16x8 dialogue-font letters: A B M W X / a c k t. CRC32 with this font: standard English **2050B471**, PCE cinematic **B8F9F834**, PCE no-cutscene **07186D32**.
 
 2. PCE Content Expansion by gymzatan:
-   An optional expansion for the completed English GBA port, adding selected PC Engine CD demons, story events, special fusions, A-DDS entries, and in-game cinematics with their background music. Tokyo's destruction plays after the original GBA nuclear short animation and before the heroine's farewell and teleportation. The Great Flood follows the native flood effect and precedes the hero's disaster report. Gotou's introduction and the Messiah statue scene use their native first-event flags; later visits retain the original quest dialogue without replaying completed scenes.
-   [Download the PCE BPS](SMT1_PCE_Content_Expansion_EN.bps) and its separate [readme.txt](readme.txt) for installation, content details and fusion recipes. Apply the BPS to the unmodified English ROM generated above (16 MiB; CRC32 **F74DB49F**). The result is 32 MiB with CRC32 **9C325EFC**. If also using the optional font adjustment, apply the PCE BPS first, then the font IPS.
+   Additional demons, events, special fusions, A-DDS entries and the Dog Collar fix for LV65 Pascal. Choose **one** edition:
 
-The [latest release](https://github.com/gymzatan/SMT1-iOS-to-GBA/releases/latest) provides the two core translation BPS files, both optional patches, and the separate PCE readme as individual downloads.
+   | Edition | Patch | Output size | Output CRC32 |
+   | --- | --- | --- | --- |
+   | With PCE in-game cinematics and music | [Cinematic BPS](SMT1_PCE_Content_Expansion_EN.bps) | 32 MiB | EFA26E19 |
+   | Without added PCE cinematics/music | [No-cutscene BPS](SMT1_PCE_Content_Expansion_No_Cutscenes_EN.bps) | 16 MiB | D0056DDC |
+
+   Both patches require the **same unmodified English ROM** produced by the core port above (16 MiB; CRC32 **F74DB49F**). Apply one PCE BPS directly to that base; the editions are alternatives, not cumulative patches. Apply the optional font IPS last. Detailed instructions, content and fusion recipes are in the separate [PCE readme.txt](readme.txt).
+
+   The no-cutscene edition retains native GBA story/fusion animations and the added demon/events content. It is offered for reports of PCE movie freezes in My Boy! and JohnGBA; device-side compatibility remains to be confirmed. Both editions have been checked in mGBA.
+
+The [latest release](https://github.com/gymzatan/SMT1-iOS-to-GBA/releases/latest) provides both core translation BPS files, the two alternative PCE BPS files, the optional font IPS and the separate PCE readme as individual downloads.
 
 Credits for the flips project https://github.com/Alcaro/Flips

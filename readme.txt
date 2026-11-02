@@ -2,85 +2,93 @@ Shin Megami Tensei: PCE Content Expansion (English)
 ================================================
 By gymzatan
 
-An English GBA modification that restores selected PC Engine CD content:
-additional demons and event forms, their story events and special fusions,
-A-DDS entries, and in-game cinematic scenes with their PCE background music.
+Optional additions to the official English iOS script port for GBA.
+Choose ONE of the two PCE editions below. Both contain the same additional
+demons, story events, special fusions, A-DDS entries and Dog Collar fix.
 
 BASE GAME
 ---------
-This patch requires the English v1.3b GBA translation that ports ATLUS's
-official iOS localization to GBA. It is based on the translation listed at:
+Requires the unmodified English v1.3b GBA translation, using ATLUS's official
+iOS localization. Translation listing and project:
 https://www.romhacking.net/translations/6129/
-
-Translation and project repository:
 https://github.com/gymzatan/SMT1-iOS-to-GBA/
 
-Required input: the unmodified English v1.3b GBA ROM
-Example filename: Shin Megami Tensei (English v1.3b).gba
+Example input: Shin Megami Tensei (English v1.3b).gba
 Size:   16,777,216 bytes (16 MiB)
 CRC32:  F74DB49F
 SHA256: 38f1d1ed5c070b6345f6b9e645d98ce6711fa36e6129836ab57c35a71a6d169f
 
-Use this exact English base, without the optional font hack or other patches.
-A filename alone does not identify a compatible ROM; check the checksum.
+Create this English base using the two core translation BPS files and the
+separate repository README. If you already have this exact English ROM,
+you can apply either optional PCE patch directly.
 
-INSTALLATION
-------------
-1. Download the BPS patch and this readme.txt.
-2. Open a BPS patcher, such as Floating IPS or a compatible ROM patcher.
-3. Select "SMT1_PCE_Content_Expansion_EN.bps" and the required English ROM.
-4. Save the result as a new .gba file, then open it in your GBA emulator.
+INSTALLATION - CHOOSE ONE PCE EDITION
+-----------------------------------
+1. Select one of these BPS files in a compatible BPS patcher:
 
-Expected output:
-Size:   33,554,432 bytes (32 MiB)
-CRC32:  9C325EFC
-SHA256: 43680ecf6a96127640e750b2b2a0eefaac96e05cb4157a74160f7877755f6445
+   SMT1_PCE_Content_Expansion_EN.bps
+   Full PCE presentation, with five added in-game cinematics/music,
+   terminal animation and water-transport ripples.
+   Output: 32 MiB; CRC32 EFA26E19
+   SHA256: 82519afeec44bc7a64e4a6e98b82d759599777ce15f1584dd7017e3d6777511c
 
-If the patcher reports an input mismatch, check the base ROM. Do not force
-the patch onto a different revision or an already modified ROM.
+   SMT1_PCE_Content_Expansion_No_Cutscenes_EN.bps
+   No added PCE movie player, sampled movie music, terminal animation or
+   water-ripple presentation. Retains the additional demons, events,
+   fusions, A-DDS, and Demon Duck/Zombie Mouse portraits/dialogue.
+   Uses the original GBA story sequences and fusion animations.
+   Output: 16 MiB; CRC32 D0056DDC
+   SHA256: 7d06607234e06e9d179cc4af821576dcdaf3a3e24477e9d7531336955ce3e0cc
 
-ADDED CONTENT
--------------
-* Eight added demon records and event forms: Preacher (LV60), Amaterasu
-  (LV60), Crusader (LV60), Dainichi (LV99), event Cerberus forms at LV20,
-  LV25 and LV55, and Pascal's LV65 beast form. The original LV43 Cerberus
-  remains available.
-* Native battle abilities, skills, fusion, summoning, party status and game
-  saving for the added allies. English party-name graphics are included.
-  Added demon portraits align with the original GBA sprite baseline in
-  fusion previews and status screens.
-* A-DDS entries with race/name, place of origin and a short summary on the
-  first page, followed by paginated background descriptions.
+2. Apply your chosen BPS to the SAME unmodified English base listed above.
+   Save the result as a new .gba file. Do not apply both PCE BPS files,
+   or apply either BPS to an existing PCE edition.
+3. If desired, apply SMT1_GBA_Font_Hack.ips LAST.
+
+The PCE BPS files validate the input. If there is a checksum error, check
+the base ROM instead of forcing a patch. The optional font IPS does not
+validate an input checksum and preserves the ROM size.
+
+Font-patched CRC32 values:
+  Standard English: 2050B471
+  PCE cinematic edition: B8F9F834
+  PCE no-cutscene edition: 07186D32
+
+The no-cutscene edition is offered for reports of the added PCE movies
+freezing My Boy! and JohnGBA. It removes the added movie implementation;
+compatibility on those Android apps still needs device-side confirmation.
+Both editions have been checked with the mGBA core.
+
+COMMON ADDED CONTENT
+--------------------
+* Eight added demon records: Preacher (LV60), Amaterasu (LV60), Crusader
+  (LV60), Dainichi (LV99), Cerberus at LV20/LV25/LV55, and Pascal at LV65.
+  The original LV43 Cerberus remains available.
+* Native abilities, skills, battle, summoning, status, saving and English
+  party-name graphics, with native sprite alignment in fusion/status views.
+* A-DDS entries: race/name, place of origin and a short summary on page one,
+  followed by background descriptions.
 * Pascal's Ichigaya rescue, initial fusion, terminal and Tokyo Destiny Land
-  reunion events, with the relevant story flags and party-capacity checks.
-  An unfused dog following the hero is an extra fusion candidate and does
-  not occupy a COMP slot, including when all twelve COMP slots are filled.
-* The Sugamo Prison three-demon ritual, using the native material-selection
-  sequence and fusion animation.
-* Five PCE in-game cinematics: Gotou's appearance, Tokyo's destruction,
-  the Chaos Hero's transformation, the Great Flood, and the Messiah
-  statue/Law Hero scene. They are
-  adapted to the GBA screen and include the corresponding PCE background
-  music. Normal game display and music resume after each scene.
-* PCE terminal presentation, water-transport ripples, and the Demon Duck
-  and Zombie Mouse portraits at Tokyo Destiny Land.
+  reunion, including native story, level and party-capacity conditions.
+  The unfused following dog is an extra fusion candidate with a full COMP.
+* Sugamo Prison's native three-demon selection and fusion ritual.
+* Demon Duck and Zombie Mouse portraits/dialogue with the original luck games.
+* Dog Collar eligibility for LV65 Pascal in the COMP without marking him fused.
 
-The Chaos Hero's transformation plays after his native demon fusion,
-before his declaration of newfound power. Thor uses his original event
-and battle sequence without this movie.
+PCE CINEMATIC EDITION
+--------------------
+Five added sequences: Gotou's first meeting, Tokyo's destruction, the Chaos
+Hero's transformation, the Great Flood, and the Messiah statue/Law Hero.
+They include their corresponding PCE music. Tokyo's destruction follows
+the original GBA nuclear short sequence and precedes the heroine's farewell
+and teleportation. Chaos transformation follows native fusion and precedes
+the declaration of power. The flood follows the original effect and
+precedes the disaster report. First-event guards prevent movie replays.
+Thor retains his original event and battle. The no-cutscene edition uses
+the original GBA presentation throughout these events.
 
-Gotou's introduction plays on the first meeting only. Tokyo's destruction
-plays immediately after the original GBA nuclear short animation, before
-the heroine's farewell and teleportation. En no Ozuno retains his original
-waking conversation and later tasks. The Great Flood plays after the
-original GBA flood effect and before either hero reports the disaster. It
-plays once from either native trigger, including when returning before
-using water transport. The Messiah statue scene uses the native
-first-inspection flag.
-
-Events are integrated into the existing game locations. This modification
-does not add new dungeon maps. PCE title, opening and staff-roll sequences
-are outside its scope.
+Events use existing game locations; no new dungeon maps are added.
+PCE title, opening and staff-roll sequences are outside the expansion.
 
 SPECIAL FUSIONS AND PASCAL
 -------------------------
@@ -105,40 +113,36 @@ still apply. The Golden Apple is checked, not consumed. Declining or a
 full COMP preserves the waiting state for a later return, without repeating
 the recovery dialogue. Owning the exact late form completes the reunion
 without adding a duplicate; earlier Cerberus forms can coexist with it.
+The Dog Collar visionary item accepts either the original Pascal-fusion
+history or LV65 Pascal currently in the COMP. This does not mark Pascal
+as fused. The original Echidna reward event and duplicate guard still apply;
+an already completed event is not replayed or retroactively changed.
+
 A full COMP can prevent an actual ally from joining; the
 unfused dog following the hero is handled separately as a fusion material.
 
 SAVES AND TESTING
 -----------------
-Back up your normal game save before using it with the modified ROM. If
-your emulator matches saves by filename, give the .gba and .sav files the
-same basename. The title menu's CONTINUE reads the game's suspend record;
-LOAD reads the ordinary save slots. Emulator savestates are separate from
-these game saves and may depend on the precise ROM and emulator build.
+Normal game-save formats are shared between the two editions. Copy the
+matching-language SAV beside your chosen ROM with the same basename, and
+keep your original copy. Emulator savestates depend on the edition/build;
+use edition-specific checkpoints instead of exchanging emulator states.
+CONTINUE reads the native suspend record; LOAD reads ordinary save slots.
 
-The implementation has been checked in mGBA, including native fusion and
-event completion, later movement and revisits, saving and reloading,
-party names, A-DDS, and cinematic display/audio restoration. Applying this
-BPS to the required base reproduces the delivered ROM byte for byte.
-The additional condition checks cover 25 Pascal cases and 18 cinematic
-cases per language through real event entrances, including consecutive
-returns without resetting story flags. Nuclear timing is additionally
-checked for Law, Neutral and Chaos, with the living heroine and her soul.
+Both BPS files reproduce their target ROMs byte for byte. The Dog Collar
+fix was checked through the original Echidna encounter and later visits.
+The no-cutscene edition passed 33 real-location event cases per language,
+including completion, movement, menus, revisit and reload, and native
+ordinary-save reading. Its PCE movie player and movie/audio payloads are
+absent. Shared demon/event code and data match the cinematic edition.
 These checks do not constitute a complete playthrough of every route.
 
 CREDITS
 -------
 ATLUS: original game and official English iOS localization.
 gymzatan: iOS-to-GBA English script port and PCE Content Expansion.
-Ds886: the translation repository's creation scripts.
+FlamePurge: optional dialogue-font adjustment.
+Ds886: translation repository creation scripts.
 Alcaro: Floating IPS / Flips.
 
-The separate optional font hack is by FlamePurge. Apply
-SMT1_GBA_Font_Hack.ips to either the standard English game or the completed
-PCE expansion. The same ordinary IPS has no input checksum check and keeps
-the ROM size unchanged. When using both additions, apply the PCE BPS first,
-then the font IPS. The PCE expansion with this font has CRC32 5D660B06.
-The font adjustment is optional.
-
-This release distributes only a modification patch and documentation.
-No game ROM, iOS application, save file or emulator is included.
+Only modification patches and documentation are distributed here.
